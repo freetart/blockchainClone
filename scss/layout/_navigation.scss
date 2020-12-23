@@ -1,0 +1,58 @@
+.navigation {
+  @include maxWidth();
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem;
+
+  &-logo {
+    i {
+      color: color(primary);
+    }
+
+    h2 {
+      font-size: size(lg);
+      // color: color(white);
+    }
+
+    span {
+      color: color(gray);
+    }
+  }
+
+  &-link {
+    font-size: size(sm);
+    margin-left: 2rem;
+    color: color(gray);
+  }
+
+  &-link:nth-child(1) {
+    margin-left: 0;
+  }
+
+  &-search {
+    position: relative;
+    input {
+      padding: 1rem;
+      width: 30rem;
+      border: 0;
+      font-size: size(xs);
+      background-color: color(secondary);
+      color: color(white);
+      border-radius: 1rem;
+      padding-left: 4rem;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.5rem;
+      color: color(gray);
+      font-size: size(xs) - 0.2rem;
+    }
+  }
+}
