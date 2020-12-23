@@ -1,11 +1,10 @@
-.wallet {
+.exchange {
   @include sectionSpacing();
   @include maxWidth();
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   align-items: center;
-  margin-top: 20rem;
 
   &-info {
     &-logos {
@@ -24,7 +23,7 @@
 
       a:not(.btn) {
         font-size: size(sm);
-        color: color(primary);
+        color: color(tertiary);
         margin-left: 2rem;
 
         i {
@@ -38,10 +37,18 @@
           }
         }
       }
+
+      .btn {
+        background-color: color(tertiary);
+
+        &:hover {
+          background-color: darken(color(tertiary), 5%);
+        }
+      }
     }
 
     &-border {
-      border-left: 0.3rem solid color(primary);
+      border-left: 0.3rem solid color(tertiary);
 
       a {
         color: color(black);
@@ -50,7 +57,7 @@
         transition: all 0.2s ease;
 
         &:hover {
-          color: color(primary);
+          color: color(tertiary);
         }
       }
 
