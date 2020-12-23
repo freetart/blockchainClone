@@ -1,0 +1,23 @@
+@mixin flexLayout() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin sectionSpacing() {
+  padding: 5rem 2rem;
+}
+
+@mixin headingStyles() {
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+}
+
+@mixin textStyles() {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+}
