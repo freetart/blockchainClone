@@ -1,9 +1,11 @@
 .btn {
-  padding: 1.1rem;
-  font-size: size(sm);
+  @include headingStyles();
+  padding: 1.3rem;
+  font-size: size(xs);
   border-radius: 0.5rem;
   width: 100%;
   font-family: "Open Sans", sans-serif;
+  z-index: 10;
 
   &-light {
     background-color: color(primary);
@@ -18,7 +20,7 @@
   &-dark {
     background-color: color(secondary);
     color: color(white);
-    margin-right: 0.5em;
+    transition: all 0.2s ease;
 
     &:hover {
       background-color: lighten(color(secondary), 5%);

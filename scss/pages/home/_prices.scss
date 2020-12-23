@@ -1,0 +1,70 @@
+.overflow-prices {
+  background-color: color(white);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.4rem 0.5rem 1rem color(gray);
+
+  .price {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid color(gray);
+
+    &-left {
+      @include headingStyles();
+      display: flex;
+      align-items: center;
+
+      img {
+        display: block;
+        width: 3rem;
+      }
+
+      h5 {
+        font-size: size(xs);
+        color: color(black);
+        margin: 0 1rem;
+      }
+
+      p {
+        font-size: size(xs);
+        color: color(black);
+        display: inline-block;
+      }
+    }
+
+    &-right {
+      @include textStyles();
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h5 {
+        font-size: size(xs);
+        color: color(black);
+      }
+
+      p {
+        font-size: size(xs);
+        color: color(black);
+        margin-left: 2rem;
+      }
+
+      .success {
+        color: #14b814;
+      }
+
+      .danger {
+        color: #c70505;
+      }
+    }
+  }
+}
+
+.price:nth-child(3) {
+  border-bottom: 0;
+}

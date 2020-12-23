@@ -1,8 +1,12 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/helpers";
 
 @import "layout/navigation";
 
 @import "components/buttons";
+
+@import "pages/home/hero";
+@import "pages/home/prices";
 
 @import "base/base";

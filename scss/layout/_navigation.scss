@@ -1,9 +1,16 @@
+header {
+  background-color: color(secondary);
+}
+
 .navigation {
   @include maxWidth();
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 2rem;
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
 
   &-logo {
     i {
@@ -12,7 +19,7 @@
 
     h2 {
       font-size: size(lg);
-      // color: color(white);
+      color: color(white);
     }
 
     span {
@@ -24,6 +31,11 @@
     font-size: size(sm);
     margin-left: 2rem;
     color: color(gray);
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: color(white);
+    }
   }
 
   &-link:nth-child(1) {
@@ -33,13 +45,13 @@
   &-search {
     position: relative;
     input {
-      padding: 1rem;
+      padding: 1.4rem;
       width: 30rem;
       border: 0;
       font-size: size(xs);
       background-color: color(secondary);
       color: color(white);
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       padding-left: 4rem;
 
       &:focus {
@@ -49,10 +61,10 @@
 
     i {
       position: absolute;
-      top: 1.2rem;
-      left: 1.5rem;
+      top: 1em;
+      left: 1em;
       color: color(gray);
-      font-size: size(xs) - 0.2rem;
+      font-size: size(xs);
     }
   }
 }

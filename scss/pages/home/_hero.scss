@@ -1,0 +1,29 @@
+.hero {
+  background: url(/images/home/hero-gradient.svg) center center/cover no-repeat;
+  height: 50vh;
+  position: relative;
+
+  &-content {
+    @include maxWidth();
+    @include flexLayout();
+    height: 50vh;
+
+    h1 {
+      @include headingStyles();
+      font-size: size(xl) + 1rem;
+      color: color(white);
+      width: 70%;
+    }
+
+    h2 {
+      @include headingStyles();
+      font-size: size(md);
+      color: color(white);
+      width: 70%;
+    }
+
+    .btn {
+      width: 20%;
+    }
+  }
+}
