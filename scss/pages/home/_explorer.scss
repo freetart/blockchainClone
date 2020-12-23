@@ -1,9 +1,9 @@
-.exchange {
+.explorer {
   @include sectionSpacing();
   @include maxWidth();
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 4rem;
   align-items: center;
 
   &-info {
@@ -23,7 +23,7 @@
 
       a:not(.btn) {
         font-size: size(sm);
-        color: color(tertiary);
+        color: color(quaternary);
         margin-left: 2rem;
 
         i {
@@ -39,16 +39,16 @@
       }
 
       .btn {
-        background-color: color(tertiary);
+        background-color: color(quaternary);
 
         &:hover {
-          background-color: darken(color(tertiary), 5%);
+          background-color: darken(color(quaternary), 5%);
         }
       }
     }
 
     &-border {
-      border-left: 0.3rem solid color(tertiary);
+      border-left: 0.3rem solid color(quaternary);
 
       a {
         color: color(black);
@@ -57,7 +57,7 @@
         transition: all 0.2s ease;
 
         &:hover {
-          color: color(tertiary);
+          color: color(quaternary);
         }
       }
 
@@ -79,7 +79,7 @@
         transition: color 0.2s ease;
 
         &:hover {
-          color: color(tertiary);
+          color: color(quaternary);
         }
       }
     }
