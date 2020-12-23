@@ -1,12 +1,12 @@
 .hero {
   background: url(/images/home/hero-gradient.svg) center center/cover no-repeat;
-  height: 50vh;
+  height: 70vh;
   position: relative;
 
   &-content {
     @include maxWidth();
     @include flexLayout();
-    height: 50vh;
+    height: 70vh;
 
     h1 {
       @include headingStyles();

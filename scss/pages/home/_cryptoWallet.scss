@@ -1,0 +1,65 @@
+.crypto-wallet {
+  @include sectionSpacing();
+  @include maxWidth();
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 15rem;
+
+  &-info {
+    img {
+      width: 5rem;
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(xl) + 1rem;
+      margin: 2rem 0;
+    }
+
+    &-btn-link {
+      margin: 4rem 0;
+
+      a:not(.btn) {
+        font-size: size(sm);
+        color: color(primary);
+        margin-left: 2rem;
+      }
+    }
+
+    &-border {
+      border-left: 0.3rem solid color(primary);
+
+      a {
+        color: color(black);
+        font-size: size(lg);
+      }
+
+      p {
+        font-size: size(md);
+        margin: 2rem 0;
+      }
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        font-size: size(lg);
+        margin: 2rem 0;
+        color: color(black);
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: color(primary);
+        }
+      }
+    }
+  }
+
+  &-img {
+    width: 100%;
+  }
+}

@@ -3,14 +3,17 @@ header {
 }
 
 .navigation {
-  @include maxWidth();
+  background-color: rgba(color(secondary), 0.9);
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 2rem;
   overflow-x: hidden;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 1000;
+  width: 100vw;
+  border-bottom: 0.2rem solid color(white);
 
   &-logo {
     i {
@@ -45,26 +48,28 @@ header {
   &-search {
     position: relative;
     input {
-      padding: 1.4rem;
+      padding: 1rem;
       width: 30rem;
       border: 0;
       font-size: size(xs);
-      background-color: color(secondary);
+      background-color: transparent;
       color: color(white);
-      border-radius: 0.5rem;
-      padding-left: 4rem;
+      padding-left: 3rem;
+      border-bottom: 0.2rem solid color(white);
+      transition: all 0.2s ease;
 
       &:focus {
         outline: 0;
+        border-bottom: 0.2rem solid color(primary);
       }
     }
 
     i {
       position: absolute;
-      top: 1em;
-      left: 1em;
+      top: 0.8em;
+      left: 0.5em;
       color: color(gray);
-      font-size: size(xs);
+      font-size: size(xs) - 0.2rem;
     }
   }
 }
