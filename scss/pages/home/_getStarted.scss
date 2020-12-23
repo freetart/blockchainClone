@@ -1,0 +1,24 @@
+.get-started {
+  background-color: color(secondary);
+
+  &-content {
+    @include flexLayout();
+    background: url(/images/home/hero-gradient.svg) center center/cover
+      no-repeat;
+
+    img {
+      width: 40rem;
+    }
+
+    h2 {
+      @include headingStyles();
+      font-size: size(xl) + 2rem;
+      margin: 6rem 0 3rem 0;
+      color: color(white);
+    }
+
+    .btn {
+      width: 20%;
+    }
+  }
+}
