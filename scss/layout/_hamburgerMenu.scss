@@ -1,0 +1,92 @@
+.menu-navbar {
+  // width: 300px;
+  width: 100%;
+  height: 100%;
+  // background-color: color(black);
+  background: url(/images/home/hero-gradient.svg) center center/cover no-repeat;
+  position: fixed;
+  top: 0;
+  // right: -300px;
+  right: -100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  z-index: 1001;
+}
+
+.change {
+  right: 0;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: none;
+  z-index: 1000;
+
+  @include response(xxl) {
+    display: flex;
+  }
+
+  i {
+    color: color(primary);
+    font-size: size(xl);
+  }
+}
+
+.nav-list {
+  text-align: left;
+  background: color(black);
+  padding: 5rem;
+  border-radius: 5rem;
+  border: 0.5rem solid color(primary);
+
+  i {
+    font-size: size(xl);
+    color: color(white);
+  }
+}
+
+.nav-item {
+  margin: 25px;
+}
+
+.nav-link {
+  font-size: size(lg);
+  color: color(white);
+  letter-spacing: 0.1rem;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: color(primary);
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.nav-link::before {
+  top: 0;
+  transform-origin: right;
+}
+
+.nav-link::after {
+  bottom: 0;
+  transform-origin: left;
+}
+
+.nav-link:hover::before {
+  transform: scaleY(1);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
