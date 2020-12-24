@@ -5,6 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
   align-items: center;
+  overflow: hidden;
 
   &-info {
     &-logos {

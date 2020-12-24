@@ -2,6 +2,7 @@
   background: url(/images/home/hero-gradient.svg) center center/cover no-repeat;
   height: 70vh;
   position: relative;
+  overflow: hidden;
 
   &-content {
     @include maxWidth();
