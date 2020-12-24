@@ -1,0 +1,29 @@
+.sub-hero {
+  @include sectionSpacing();
+  @include maxWidth();
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+
+  &-info {
+    h2 {
+      @include headingStyles();
+      font-size: size(xl) + 2rem;
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(lg);
+      margin: 1rem 0 3rem 0;
+      color: color(gray);
+    }
+  }
+
+  &-img {
+    img {
+      width: 100%;
+    }
+  }
+}

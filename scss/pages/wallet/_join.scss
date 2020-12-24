@@ -1,0 +1,30 @@
+.join {
+  background-color: color(secondary);
+}
+.join-content {
+  @include maxWidth();
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
+
+  &-info {
+    h2 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(xl) + 2rem;
+    }
+
+    p {
+      @include textStyles();
+      color: color(gray);
+      font-size: size(lg);
+      margin: 1rem 0 3rem 0;
+    }
+  }
+
+  img {
+    width: 50rem;
+  }
+}
