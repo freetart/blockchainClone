@@ -8,10 +8,21 @@
   justify-content: center;
   align-items: center;
   padding: 15rem 0;
+  overflow: hidden;
+
+  @include response(xxl) {
+    grid-template-columns: 1fr;
+    padding: 10rem 2rem;
+    gap: 2rem;
+  }
 
   &-info {
     position: relative;
     margin-bottom: 40rem;
+
+    @include response(md) {
+      margin-bottom: 55rem;
+    }
 
     &-content {
       box-shadow: 0.4rem 0.4rem 1rem color(gray);
@@ -55,6 +66,12 @@
     &-content.active {
       opacity: 1;
       visibility: visible;
+    }
+  }
+
+  .wallet-features-links {
+    @include response(xxl) {
+      order: -1;
     }
   }
 

@@ -1,5 +1,6 @@
 .swap {
   background: color(black);
+  overflow: hidden;
 
   .swap-content {
     @include maxWidth();
@@ -8,6 +9,11 @@
     align-items: center;
     gap: 2rem;
     padding-top: 5rem;
+
+    @include response(xxl) {
+      grid-template-columns: 1fr;
+      padding: 5rem 2rem 0 2rem;
+    }
 
     &-info {
       h3 {
@@ -27,6 +33,11 @@
 
     img {
       width: 50rem;
+
+      @include response(xxl) {
+        width: 100%;
+        max-width: 1000px;
+      }
     }
   }
 }

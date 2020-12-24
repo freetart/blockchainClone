@@ -1,5 +1,6 @@
 .digital-dollar {
   background-color: color(secondary);
+  overflow: hidden;
 
   &-content {
     @include maxWidth();
@@ -23,10 +24,18 @@
       color: color(gray);
       width: 70%;
       margin: 2rem 0;
+
+      @include response(xl) {
+        width: 100%;
+      }
     }
 
     .btn {
       width: 20%;
+
+      @include response(xl) {
+        width: 80%;
+      }
     }
   }
 }

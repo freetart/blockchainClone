@@ -6,7 +6,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   align-items: center;
-  height: 70vh;
+  overflow: hidden;
+
+  @include response(xxl) {
+    grid-template-columns: 1fr;
+  }
 
   &-info {
     h2 {

@@ -1,5 +1,6 @@
 .join {
   background-color: color(secondary);
+  overflow: hidden;
 }
 .join-content {
   @include maxWidth();
@@ -9,7 +10,16 @@
   gap: 4rem;
   align-items: center;
 
+  @include response(xxl) {
+    grid-template-columns: 1fr;
+    padding: 5rem 2rem 0 2rem;
+  }
+
   &-info {
+    @include response(xxl) {
+      order: -1;
+    }
+
     h2 {
       @include headingStyles();
       color: color(white);
@@ -24,7 +34,12 @@
     }
   }
 
-  img {
+  &-img {
     width: 50rem;
+
+    @include response(xxl) {
+      width: 100%;
+      max-width: 1000px;
+    }
   }
 }
