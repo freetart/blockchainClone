@@ -16,10 +16,18 @@
       font-size: size(xl) + 2rem;
       margin: 6rem 0 3rem 0;
       color: color(white);
+
+      @include response(sm) {
+        font-size: size(xl);
+      }
     }
 
     .btn {
       width: 20%;
+
+      @include response(xl) {
+        width: 80%;
+      }
     }
   }
 }

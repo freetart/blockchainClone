@@ -8,6 +8,21 @@
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0.4rem 0.5rem 1rem color(gray);
+  margin-top: 2rem;
+
+  @include response(xxl) {
+    top: 75%;
+  }
+
+  @include response(xl) {
+    width: 50rem;
+  }
+
+  @include response(md) {
+    width: 100%;
+    top: 80%;
+    display: block;
+  }
 
   .price {
     display: flex;
@@ -46,6 +61,10 @@
       h5 {
         font-size: size(xs);
         color: color(black);
+
+        @include response(sm) {
+          display: none;
+        }
       }
 
       p {

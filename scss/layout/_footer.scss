@@ -8,6 +8,10 @@
     grid-gap: 2rem;
     padding: 5rem 0;
 
+    @include response(lg) {
+      grid-template-columns: 1fr;
+    }
+
     .social {
       display: flex;
       margin: 1rem 0;
@@ -52,6 +56,10 @@
     align-items: center;
     justify-content: space-around;
 
+    @include response(lg) {
+      grid-template-columns: 1fr;
+    }
+
     .copyright {
       font-size: size(xs);
     }
@@ -59,6 +67,10 @@
     .app-stores {
       display: flex;
       justify-content: flex-end;
+
+      @include response(lg) {
+        justify-content: flex-start;
+      }
 
       img {
         width: 12rem;

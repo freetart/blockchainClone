@@ -7,7 +7,14 @@
   align-items: center;
   overflow: hidden;
 
+  @include response(xxl) {
+    grid-template-columns: 1fr;
+  }
+
   &-info {
+    @include response(xxl) {
+      order: -1;
+    }
     &-logos {
       display: flex;
       width: 5rem;
@@ -26,6 +33,10 @@
         font-size: size(sm);
         color: color(tertiary);
         margin-left: 2rem;
+
+        @include response(sm) {
+          display: none;
+        }
 
         i {
           margin-left: 0.5rem;
@@ -57,6 +68,14 @@
         margin-left: 2rem;
         transition: all 0.2s ease;
 
+        @include response(md) {
+          font-size: size(lg);
+        }
+
+        @include response(sm) {
+          font-size: size(md);
+        }
+
         &:hover {
           color: color(tertiary);
         }
@@ -78,6 +97,10 @@
         margin: 2rem 0;
         color: color(black);
         transition: color 0.2s ease;
+
+        @include response(md) {
+          font-size: size(lg);
+        }
 
         &:hover {
           color: color(tertiary);

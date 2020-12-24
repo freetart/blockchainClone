@@ -39,6 +39,10 @@ header {
     &:hover {
       color: color(white);
     }
+
+    @include response(xxl) {
+      display: none;
+    }
   }
 
   &-link:nth-child(1) {
@@ -58,6 +62,10 @@ header {
       border-bottom: 0.2rem solid color(white);
       transition: all 0.2s ease;
 
+      @include response(xxl) {
+        display: none;
+      }
+
       &:focus {
         outline: 0;
         border-bottom: 0.2rem solid color(primary);
@@ -70,6 +78,16 @@ header {
       left: 0.5em;
       color: color(gray);
       font-size: size(xs) - 0.2rem;
+
+      @include response(xxl) {
+        display: none;
+      }
+    }
+  }
+
+  .btn {
+    @include response(xxl) {
+      display: none;
     }
   }
 }

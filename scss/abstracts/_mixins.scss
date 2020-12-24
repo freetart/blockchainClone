@@ -26,3 +26,35 @@
   max-width: 1300px;
   margin: auto;
 }
+
+@mixin response($breakpoint) {
+  @if ($breakpoint == xxl) {
+    @media (max-width: 1010px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xl) {
+    @media (max-width: 700px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md) {
+    @media (max-width: 510px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+}

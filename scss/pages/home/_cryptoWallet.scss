@@ -8,6 +8,10 @@
   margin-top: 20rem;
   overflow: hidden;
 
+  @include response(xxl) {
+    grid-template-columns: 1fr;
+  }
+
   &-info {
     &-logos {
       display: flex;
@@ -27,6 +31,10 @@
         font-size: size(sm);
         color: color(primary);
         margin-left: 2rem;
+
+        @include response(sm) {
+          display: none;
+        }
 
         i {
           margin-left: 0.5rem;
@@ -50,6 +58,14 @@
         margin-left: 2rem;
         transition: all 0.2s ease;
 
+        @include response(md) {
+          font-size: size(lg);
+        }
+
+        @include response(sm) {
+          font-size: size(md);
+        }
+
         &:hover {
           color: color(primary);
         }
@@ -71,6 +87,10 @@
         margin: 2rem 0;
         color: color(black);
         transition: color 0.2s ease;
+
+        @include response(md) {
+          font-size: size(lg);
+        }
 
         &:hover {
           color: color(primary);
