@@ -1,0 +1,32 @@
+.swap {
+  background: color(black);
+
+  .swap-content {
+    @include maxWidth();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5rem;
+
+    &-info {
+      h3 {
+        @include headingStyles();
+        color: color(white);
+        font-size: size(xl) + 2rem;
+      }
+
+      p {
+        @include textStyles();
+        color: color(gray);
+        font-size: size(md);
+        width: 70%;
+        margin: 2rem 0;
+      }
+    }
+
+    img {
+      width: 50rem;
+    }
+  }
+}
