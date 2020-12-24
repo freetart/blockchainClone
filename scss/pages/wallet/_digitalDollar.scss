@@ -1,0 +1,32 @@
+.digital-dollar {
+  background-color: color(secondary);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+    @include flexLayout();
+
+    img {
+      width: 10rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      @include headingStyles();
+      font-size: size(xl) + 2rem;
+      color: color(white);
+    }
+
+    p {
+      @include textStyles();
+      font-size: size(md);
+      color: color(gray);
+      width: 70%;
+      margin: 2rem 0;
+    }
+
+    .btn {
+      width: 20%;
+    }
+  }
+}

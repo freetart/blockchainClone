@@ -5,6 +5,7 @@ const menuNavbar = document.querySelector(".menu-navbar");
 menuIcon.addEventListener("click", () => menuNavbar.classList.toggle("change"));
 
 // WALLET FEATURES
+// FIXME | please refactor this one day, you dummy!
 const security = document.querySelector(".security");
 const securityLink = document.querySelector(".security-link");
 
