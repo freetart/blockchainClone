@@ -1,0 +1,37 @@
+.speed {
+  background-color: color(secondary);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+    align-items: center;
+
+    small {
+      @include textStyles();
+      color: color(green);
+      font-size: size(xs);
+    }
+
+    h3 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(xl);
+    }
+
+    h4 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(md);
+    }
+
+    p {
+      @include textStyles();
+      color: color(gray);
+      font-size: size(sm);
+      margin-bottom: 2.5rem;
+    }
+  }
+}
