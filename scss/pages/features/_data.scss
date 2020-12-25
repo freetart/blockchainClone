@@ -28,6 +28,10 @@
         color: color(gray);
         width: 70%;
         margin: auto;
+
+        @include response(lg) {
+          width: 100%;
+        }
       }
     }
 

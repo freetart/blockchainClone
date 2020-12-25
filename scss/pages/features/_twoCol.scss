@@ -9,7 +9,14 @@
     gap: 4rem;
     align-items: center;
 
+    @include response(xxl) {
+      grid-template-columns: 1fr;
+    }
+
     &-info {
+      @include response(xxl) {
+        order: -1;
+      }
       small {
         @include textStyles();
         letter-spacing: 0.5rem;
