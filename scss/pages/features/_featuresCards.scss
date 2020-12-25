@@ -1,0 +1,37 @@
+.features-cards {
+  background-color: color(secondary);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+
+    .card {
+      padding: 2rem 0;
+
+      small {
+        @include textStyles();
+        letter-spacing: 0.5rem;
+        font-size: size(xs);
+        color: color(green);
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xl);
+        color: color(white);
+        margin: 2rem 0;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(sm);
+        color: color(gray);
+        width: 50%;
+      }
+    }
+  }
+}

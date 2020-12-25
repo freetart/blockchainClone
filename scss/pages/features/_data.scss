@@ -1,0 +1,40 @@
+.data {
+  background-color: color(secondary);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+    @include flexLayout();
+    padding-top: 15rem;
+
+    &-info {
+      small {
+        @include textStyles();
+        letter-spacing: 0.5rem;
+        font-size: size(sm);
+        color: color(green);
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xl) + 2rem;
+        color: color(white);
+        margin: 2rem 0;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+        color: color(gray);
+        width: 70%;
+        margin: auto;
+      }
+    }
+
+    &-img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
