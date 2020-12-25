@@ -1,15 +1,13 @@
-.speed {
+.ease {
   background-color: color(secondary);
-  height: 100vh;
 
   &-content {
     @include maxWidth();
     @include sectionSpacing();
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 4rem;
+    grid-gap: 2rem;
     align-items: center;
-    height: 100vh;
 
     small {
       @include textStyles();
@@ -37,7 +35,7 @@
     }
 
     img {
-      width: 100%;
+      width: 80%;
     }
   }
 }
