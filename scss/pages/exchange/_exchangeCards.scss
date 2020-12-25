@@ -1,0 +1,31 @@
+.exchange-cards {
+  background-color: color(secondary);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+
+  .exchange-card {
+    i {
+      color: color(teal);
+      font-size: size(xl);
+    }
+
+    h4 {
+      @include headingStyles();
+      color: color(white);
+      font-size: size(md);
+      margin: 1rem 0;
+    }
+
+    p {
+      @include textStyles();
+      color: color(gray);
+      font-size: size(sm);
+    }
+  }
+}

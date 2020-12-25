@@ -5,7 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   align-items: center;
-  margin-top: 20rem;
+  margin-top: 25rem;
   overflow: hidden;
 
   @include response(xxl) {
