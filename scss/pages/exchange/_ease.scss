@@ -13,6 +13,7 @@
       @include textStyles();
       color: color(green);
       font-size: size(xs);
+      letter-spacing: 0.5rem;
     }
 
     h3 {

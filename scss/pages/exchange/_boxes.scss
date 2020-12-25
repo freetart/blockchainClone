@@ -1,0 +1,54 @@
+.boxes {
+  background-color: color(secondary);
+
+  &-content {
+    @include sectionSpacing();
+    @include maxWidth();
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15rem;
+    text-align: center;
+  }
+
+  .box {
+    @include flexLayout();
+    padding: 10rem;
+
+    small {
+      @include textStyles();
+      letter-spacing: 0.5rem;
+      color: color(green);
+      font-size: size(sm);
+    }
+
+    h3 {
+      @include headingStyles();
+      font-size: size(xl);
+      color: color(white);
+    }
+
+    p {
+      @include textStyles();
+      color: color(gray);
+      font-size: size(md);
+      margin: 1rem 0 2rem 0;
+    }
+  }
+
+  .box:nth-child(1) {
+    border-right: 0.015rem solid color(green);
+    border-left: 0.015rem solid color(green);
+  }
+  .box:nth-child(2) {
+    border-bottom: 0.015rem solid color(green);
+    border-top: 0.015rem solid color(green);
+  }
+  .box:nth-child(3) {
+    border-top: 0.015rem solid color(green);
+    border-bottom: 0.015rem solid color(green);
+  }
+  .box:nth-child(4) {
+    border-left: 0.015rem solid color(green);
+    border-right: 0.015rem solid color(green);
+  }
+}

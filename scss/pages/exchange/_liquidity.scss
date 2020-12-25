@@ -6,7 +6,7 @@
     @include maxWidth();
     @include sectionSpacing();
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
     grid-gap: 4rem;
     align-items: center;
     height: 100vh;
@@ -15,6 +15,7 @@
       @include textStyles();
       color: color(green);
       font-size: size(xs);
+      letter-spacing: 0.5rem;
     }
 
     h3 {
