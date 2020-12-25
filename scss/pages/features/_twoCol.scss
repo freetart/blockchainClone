@@ -1,36 +1,40 @@
-.features-cards {
+.two-col {
   background-color: color(secondary);
 
   &-content {
-    @include maxWidth();
     @include sectionSpacing();
+    @include maxWidth();
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
+    gap: 4rem;
     align-items: center;
-    text-align: left;
 
-    .card {
-      padding: 2rem 0;
-
+    &-info {
       small {
         @include textStyles();
         letter-spacing: 0.5rem;
-        font-size: size(xs);
+        font-size: size(sm);
         color: color(green);
       }
 
       h2 {
         @include headingStyles();
-        font-size: size(xl);
+        font-size: size(xl) + 2rem;
         color: color(white);
         margin: 2rem 0;
       }
 
       p {
         @include textStyles();
-        font-size: size(sm);
+        font-size: size(md);
         color: color(gray);
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-img {
+      img {
+        width: 100%;
       }
     }
   }
