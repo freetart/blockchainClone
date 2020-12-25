@@ -1,0 +1,43 @@
+.features-hero {
+  background-color: color(secondary);
+
+  &-content {
+    @include maxWidth();
+    @include sectionSpacing();
+    padding-top: 15rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+
+    &-info {
+      small {
+        @include textStyles();
+        letter-spacing: 0.5rem;
+        font-size: size(sm);
+        color: color(green);
+      }
+
+      h2 {
+        @include headingStyles();
+        font-size: size(xl) + 2rem;
+        color: color(white);
+        margin: 1rem 0;
+      }
+
+      p {
+        @include textStyles();
+        font-size: size(md);
+        color: color(gray);
+      }
+    }
+
+    &-img {
+      img {
+        width: 100%;
+        transform: rotate(20deg);
+        padding: 2rem 0;
+      }
+    }
+  }
+}
