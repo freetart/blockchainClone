@@ -1,5 +1,6 @@
 .data {
   background-color: color(secondary);
+  overflow: hidden;
 
   &-content {
     @include maxWidth();

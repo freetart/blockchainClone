@@ -1,5 +1,6 @@
 .exchange-sub-hero {
   background-color: color(secondary);
+  overflow: hidden;
 
   &-content {
     @include sectionSpacing();

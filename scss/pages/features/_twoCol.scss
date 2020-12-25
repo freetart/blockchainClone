@@ -1,5 +1,6 @@
 .two-col {
   background-color: color(secondary);
+  overflow: hidden;
 
   &-content {
     @include sectionSpacing();
@@ -17,6 +18,7 @@
       @include response(xxl) {
         order: -1;
       }
+
       small {
         @include textStyles();
         letter-spacing: 0.5rem;
