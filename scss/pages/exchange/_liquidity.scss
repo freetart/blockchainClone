@@ -1,6 +1,5 @@
 .liquidity {
   background-color: color(secondary);
-  height: 100vh;
 
   &-content {
     @include maxWidth();
@@ -9,7 +8,16 @@
     grid-template-columns: 1fr 2fr;
     grid-gap: 4rem;
     align-items: center;
-    height: 100vh;
+
+    @include response(xxl) {
+      grid-template-columns: 1fr;
+    }
+
+    &-info {
+      @include response(xxl) {
+        order: -1;
+      }
+    }
 
     small {
       @include textStyles();
@@ -39,6 +47,10 @@
 
     img {
       width: 100%;
+
+      @include response(xxl) {
+        margin-top: 5rem;
+      }
     }
   }
 }

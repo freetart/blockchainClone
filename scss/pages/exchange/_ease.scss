@@ -9,6 +9,16 @@
     grid-gap: 2rem;
     align-items: center;
 
+    @include response(xxl) {
+      grid-template-columns: 1fr;
+    }
+
+    &-info {
+      @include response(xxl) {
+        order: -1;
+      }
+    }
+
     small {
       @include textStyles();
       color: color(green);
@@ -36,7 +46,17 @@
     }
 
     img {
-      width: 80%;
+      width: 60%;
+
+      @include response(xxl) {
+        width: 50%;
+        margin-top: 5rem;
+      }
+
+      @include response(xl) {
+        width: 100%;
+        margin-top: 5rem;
+      }
     }
   }
 }

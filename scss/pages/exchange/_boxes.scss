@@ -8,11 +8,23 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 15rem;
     text-align: center;
+
+    @include response(xxl) {
+      grid-template-columns: 1fr;
+    }
+
+    @include response(md) {
+      gap: 5rem;
+    }
   }
 
   .box {
     @include flexLayout();
     padding: 10rem;
+
+    @include response(md) {
+      padding: 5rem;
+    }
 
     small {
       @include textStyles();

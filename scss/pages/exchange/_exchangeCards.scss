@@ -7,6 +7,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
+
+    @include response(xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include response(md) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .exchange-card {

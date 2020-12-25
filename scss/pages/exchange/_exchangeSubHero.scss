@@ -33,6 +33,10 @@
     &-img {
       img {
         width: 100%;
+
+        @include response(xxl) {
+          margin-top: 5rem;
+        }
       }
     }
   }
